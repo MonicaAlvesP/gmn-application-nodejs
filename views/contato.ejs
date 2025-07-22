@@ -1,0 +1,71 @@
+<%- include('partials/header') %>
+
+  <div class="container">
+    <div class="section-title">
+      <h2>
+        <%= titulo %>
+      </h2>
+      <p>Entre em contato conosco. Estamos aqui para ajudar!</p>
+    </div>
+
+    <div class="form-container">
+      <form action="/contato" method="POST" class="contact-form">
+        <div class="form-group">
+          <label for="nome">
+            <i class="fas fa-user"></i> Nome Completo:
+          </label>
+          <input type="text" id="nome" name="nome" required placeholder="Digite seu nome completo">
+        </div>
+
+        <div class="form-group">
+          <label for="email">
+            <i class="fas fa-envelope"></i> Email:
+          </label>
+          <input type="email" id="email" name="email" required placeholder="seu@email.com">
+        </div>
+
+        <div class="form-group">
+          <label for="mensagem">
+            <i class="fas fa-comment"></i> Mensagem:
+          </label>
+          <textarea id="mensagem" name="mensagem" rows="5" required placeholder="Digite sua mensagem..."></textarea>
+        </div>
+
+        <button type="submit" class="btn" style="width: 100%;">
+          <i class="fas fa-paper-plane"></i> Enviar Mensagem
+        </button>
+      </form>
+    </div>
+
+    <div style="margin-top: 3rem;">
+      <div class="section-title">
+        <h3>Outras formas de contato</h3>
+      </div>
+
+      <div
+        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem;">
+        <div
+          style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: center;">
+          <i class="fas fa-phone" style="font-size: 2rem; color: #dc2626; margin-bottom: 1rem;"></i>
+          <h4>Telefone</h4>
+          <p>(11) 99999-9999</p>
+        </div>
+
+        <div
+          style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: center;">
+          <i class="fas fa-envelope" style="font-size: 2rem; color: #dc2626; margin-bottom: 1rem;"></i>
+          <h4>Email</h4>
+          <p>contato@reddragon.com.br</p>
+        </div>
+
+        <div
+          style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: center;">
+          <i class="fas fa-map-marker-alt" style="font-size: 2rem; color: #dc2626; margin-bottom: 1rem;"></i>
+          <h4>Endereço</h4>
+          <p>São Paulo - SP<br>Brasil</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <%- include('partials/footer') %>

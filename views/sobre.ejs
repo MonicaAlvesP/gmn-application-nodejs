@@ -1,0 +1,87 @@
+<%- include('partials/header') %>
+
+  <div class="container">
+    <div class="section-title">
+      <h2>
+        <%= titulo %>
+      </h2>
+      <p>Conheça a história da Red Dragon Store</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-bottom: 3rem;">
+      <div>
+        <h3 style="color: #dc2626; margin-bottom: 1rem;">Nossa História</h3>
+        <p style="margin-bottom: 1rem;">
+          A Red Dragon Store nasceu em 2013 com o objetivo de trazer produtos tecnológicos de alta qualidade
+          para o mercado brasileiro. Começamos como uma pequena loja especializada em periféricos gamer
+          e hoje somos referência em tecnologia.
+        </p>
+        <p style="margin-bottom: 1rem;">
+          Nossa missão é democratizar o acesso à tecnologia de ponta, oferecendo produtos inovadores
+          com preços justos e atendimento excepcional.
+        </p>
+      </div>
+      <div style="text-align: center;">
+        <i class="fas fa-dragon" style="font-size: 8rem; color: #dc2626; opacity: 0.1;"></i>
+      </div>
+    </div>
+
+    <div class="destaque" style="margin: 3rem 0;">
+      <h3 style="margin-bottom: 2rem;">Por que escolher a Red Dragon?</h3>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+        <div style="text-align: center;">
+          <i class="fas fa-shield-alt" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+          <h4>Qualidade Garantida</h4>
+          <p>Todos os produtos passam por rigoroso controle de qualidade</p>
+        </div>
+        <div style="text-align: center;">
+          <i class="fas fa-shipping-fast" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+          <h4>Entrega Rápida</h4>
+          <p>Entregas em todo o Brasil com prazos reduzidos</p>
+        </div>
+        <div style="text-align: center;">
+          <i class="fas fa-headset" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+          <h4>Suporte Especializado</h4>
+          <p>Equipe técnica especializada para te ajudar</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="background: white; padding: 3rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+      <h3 style="text-align: center; margin-bottom: 2rem; color: #1f2937;">Nossos Números</h3>
+      <div
+        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; text-align: center;">
+        <div>
+          <div style="font-size: 3rem; font-weight: bold; color: #dc2626;">10+</div>
+          <p>Anos de Experiência</p>
+        </div>
+        <div>
+          <div style="font-size: 3rem; font-weight: bold; color: #dc2626;">50K+</div>
+          <p>Clientes Satisfeitos</p>
+        </div>
+        <div>
+          <div style="font-size: 3rem; font-weight: bold; color: #dc2626;">500+</div>
+          <p>Produtos Disponíveis</p>
+        </div>
+        <div>
+          <div style="font-size: 3rem; font-weight: bold; color: #dc2626;">24/7</div>
+          <p>Suporte Online</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 3rem;">
+      <h3 style="margin-bottom: 1rem;">Ficou interessado?</h3>
+      <p style="margin-bottom: 2rem; color: #6b7280;">
+        Entre em contato conosco ou confira nossos produtos!
+      </p>
+      <a href="/contato" class="btn" style="margin-right: 1rem;">
+        <i class="fas fa-envelope"></i> Fale Conosco
+      </a>
+      <a href="/produtos" class="btn btn-secondary">
+        <i class="fas fa-shopping-bag"></i> Ver Produtos
+      </a>
+    </div>
+  </div>
+
+  <%- include('partials/footer') %>

@@ -1,0 +1,85 @@
+<%- include('partials/header') %>
+
+  <div class="container">
+    <div class="section-title">
+      <h2>
+        <%= titulo %>
+      </h2>
+      <p>Confira todas as informações do produto</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;">
+      <div>
+        <img src="<%= produto.imagem %>" alt="<%= produto.nome %>"
+          style="width: 100%; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);"
+          onerror="this.src='/img/placeholder-produto.jpg'">
+      </div>
+
+      <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+        <span class="categoria" style="margin-bottom: 1rem; display: inline-block;">
+          <%= produto.categoria %>
+        </span>
+        <h1 style="color: #1f2937; margin-bottom: 1rem;">
+          <%= produto.nome %>
+        </h1>
+        <div class="preco" style="font-size: 2rem; margin-bottom: 2rem;">
+          <%= produto.preco %>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h3 style="color: #374151; margin-bottom: 1rem;">Descrição</h3>
+          <p style="color: #6b7280; line-height: 1.6;">
+            <%= produto.descricao %>
+          </p>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h3 style="color: #374151; margin-bottom: 1rem;">Características</h3>
+          <ul style="color: #6b7280; line-height: 1.8;">
+            <li><i class="fas fa-check" style="color: #10b981; margin-right: 0.5rem;"></i> Garantia de 12 meses</li>
+            <li><i class="fas fa-check" style="color: #10b981; margin-right: 0.5rem;"></i> Entrega rápida e segura</li>
+            <li><i class="fas fa-check" style="color: #10b981; margin-right: 0.5rem;"></i> Suporte técnico especializado
+            </li>
+            <li><i class="fas fa-check" style="color: #10b981; margin-right: 0.5rem;"></i> Produto original Red Dragon
+            </li>
+          </ul>
+        </div>
+
+        <div style="border-top: 1px solid #e5e7eb; padding-top: 2rem;">
+          <button class="btn" style="width: 100%; margin-bottom: 1rem; font-size: 1.1rem;"
+            onclick="alert('Funcionalidade de compra será implementada em breve!')">
+            <i class="fas fa-shopping-cart"></i> Adicionar ao Carrinho
+          </button>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <a href="/contato" class="btn btn-secondary" style="text-align: center;">
+              <i class="fas fa-question-circle"></i> Dúvidas?
+            </a>
+            <a href="/produtos" class="btn btn-secondary" style="text-align: center;">
+              <i class="fas fa-arrow-left"></i> Voltar
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top: 3rem;">
+      <h3 style="text-align: center; margin-bottom: 2rem;">Produtos Relacionados</h3>
+      <p style="text-align: center; color: #6b7280;">
+        <a href="/produtos?categoria=<%= produto.categoria %>" class="btn btn-secondary">
+          Ver mais produtos da categoria <%= produto.categoria %>
+        </a>
+      </p>
+    </div>
+  </div>
+
+  <style>
+    @media screen and (max-width: 768px) {
+      .container>div:first-child {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+      }
+    }
+  </style>
+
+  <%- include('partials/footer') %>

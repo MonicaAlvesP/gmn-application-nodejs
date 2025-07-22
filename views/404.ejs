@@ -1,0 +1,36 @@
+<%- include('partials/header') %>
+
+  <div class="container">
+    <div class="error-page">
+      <h1>404</h1>
+      <h2>
+        <%= titulo %>
+      </h2>
+      <p>
+        <%= mensagem %>
+      </p>
+
+      <div style="margin-top: 2rem;">
+        <a href="/" class="btn" style="margin-right: 1rem;">
+          <i class="fas fa-home"></i> Voltar ao Início
+        </a>
+
+        <a href="/produtos" class="btn btn-secondary">
+          <i class="fas fa-shopping-bag"></i> Ver Produtos
+        </a>
+      </div>
+
+      <div style="margin-top: 3rem; text-align: left; max-width: 500px; margin-left: auto; margin-right: auto;">
+        <h3 style="margin-bottom: 1rem;">Talvez você esteja procurando por:</h3>
+        <ul style="color: #6b7280;">
+          <li><a href="/produtos?categoria=Gaming">Produtos Gaming</a></li>
+          <li><a href="/produtos?categoria=Smartphones">Smartphones</a></li>
+          <li><a href="/produtos?categoria=Notebooks">Notebooks</a></li>
+          <li><a href="/contato">Página de Contato</a></li>
+          <li><a href="/sobre">Sobre a Red Dragon</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <%- include('partials/footer') %>

@@ -1,0 +1,68 @@
+</main>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3><i class="fas fa-dragon"></i> Red Dragon Store</h3>
+      <p>Sua loja de tecnologia de confiança. Produtos de qualidade com os melhores preços do mercado.</p>
+      <div class="social-links">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+    <div class="footer-section">
+      <h4>Links Rápidos</h4>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/produtos">Produtos</a></li>
+        <li><a href="/sobre">Sobre Nós</a></li>
+        <li><a href="/contato">Contato</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Categorias</h4>
+      <ul>
+        <li><a href="/produtos?categoria=Gaming">Gaming</a></li>
+        <li><a href="/produtos?categoria=Smartphones">Smartphones</a></li>
+        <li><a href="/produtos?categoria=Notebooks">Notebooks</a></li>
+        <li><a href="/produtos?categoria=Monitores">Monitores</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Contato</h4>
+      <div class="contact-info">
+        <p><i class="fas fa-phone"></i> (11) 99999-9999</p>
+        <p><i class="fas fa-envelope"></i> contato@reddragon.com.br</p>
+        <p><i class="fas fa-map-marker-alt"></i> São Paulo, SP</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; <%= new Date().getFullYear() %> Red Dragon Store. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<script>
+  // Menu mobile toggle
+  const mobileMenu = document.getElementById('mobile-menu');
+  const navMenu = document.querySelector('.nav-menu');
+
+  mobileMenu.addEventListener('click', () => {
+    mobileMenu.classList.toggle('is-active');
+    navMenu.classList.toggle('active');
+  });
+
+  // Smooth scrolling
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+</script>
+</body>
+
+</html>

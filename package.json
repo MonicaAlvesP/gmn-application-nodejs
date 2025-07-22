@@ -1,0 +1,25 @@
+{
+  "name": "red-dragon-store",
+  "version": "1.0.0",
+  "description": "Loja virtual Red Dragon - Produtos de qualidade e inovação",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "red-dragon",
+    "loja-virtual",
+    "e-commerce",
+    "nodejs",
+    "express"
+  ],
+  "author": "Red Dragon Team",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0"
+  }
+}

@@ -1,0 +1,62 @@
+<%- include('partials/header') %>
+
+  <div class="container">
+    <div class="section-title">
+      <h2>
+        <%= titulo %>
+      </h2>
+      <p>Descubra nossa linha completa de produtos tecnológicos</p>
+    </div>
+
+    <div class="filtros">
+      <a href="/produtos" class="<%= categoriaAtual === 'Todos' ? 'ativo' : '' %>">
+        <i class="fas fa-th"></i> Todos
+      </a>
+      <a href="/produtos?categoria=Gaming" class="<%= categoriaAtual === 'Gaming' ? 'ativo' : '' %>">
+        <i class="fas fa-gamepad"></i> Gaming
+      </a>
+      <a href="/produtos?categoria=Smartphones" class="<%= categoriaAtual === 'Smartphones' ? 'ativo' : '' %>">
+        <i class="fas fa-mobile-alt"></i> Smartphones
+      </a>
+      <a href="/produtos?categoria=Notebooks" class="<%= categoriaAtual === 'Notebooks' ? 'ativo' : '' %>">
+        <i class="fas fa-laptop"></i> Notebooks
+      </a>
+      <a href="/produtos?categoria=Monitores" class="<%= categoriaAtual === 'Monitores' ? 'ativo' : '' %>">
+        <i class="fas fa-desktop"></i> Monitores
+      </a>
+    </div>
+
+    <% if (produtos.length===0) { %>
+      <div class="text-center">
+        <h3>Nenhum produto encontrado</h3>
+        <p>Não encontramos produtos para a categoria selecionada.</p>
+        <a href="/produtos" class="btn">Ver Todos os Produtos</a>
+      </div>
+      <% } else { %>
+        <div class="produtos-container">
+          <% produtos.forEach(function(produto) { %>
+            <div class="produto-card fade-in">
+              <img src="<%= produto.imagem %>" alt="<%= produto.nome %>"
+                onerror="this.src='/img/placeholder-produto.jpg'">
+              <span class="categoria">
+                <%= produto.categoria %>
+              </span>
+              <h3>
+                <%= produto.nome %>
+              </h3>
+              <p class="descricao">
+                <%= produto.descricao %>
+              </p>
+              <div class="preco">
+                <%= produto.preco %>
+              </div>
+              <a href="/produto/<%= produto.id %>" class="btn" style="width: 100%; text-align: center;">
+                <i class="fas fa-eye"></i> Ver Detalhes
+              </a>
+            </div>
+            <% }); %>
+        </div>
+        <% } %>
+  </div>
+
+  <%- include('partials/footer') %>
